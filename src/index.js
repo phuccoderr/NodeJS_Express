@@ -6,7 +6,7 @@ const morgan = require('morgan');
 const app = express();
 const port = 3000;
 
-                                    const route = require('./routes'); // Auto index !!!
+const route = require('./routes'); // Auto index !!!
 
 // Input Form Data
 app.use(express.urlencoded({ extended: true }));
