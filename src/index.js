@@ -5,9 +5,6 @@ const morgan = require('morgan');
 
 const app = express();
 const port = 3000;
-
-var c = 100;
-
 const route = require('./routes'); // Auto index !!!
 
 // Input Form Data
