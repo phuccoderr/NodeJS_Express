@@ -6,3 +6,7 @@
 # Morgan
 
 - bắt sự kiện middleware với các request
+
+# Prettier, lint-staged husky
+
+- làm đẹp, tuân thủ chung 1 format code
