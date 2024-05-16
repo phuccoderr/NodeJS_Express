@@ -9,15 +9,15 @@ const port = 3000;
 const route = require('./routes'); // Auto index !!!
 
 // Input Form Data
-app.use(express.urlencoded({ extended: true }));
+                    app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Static File
-app.use(express.static(path.join(__dirname, 'public')));
+        app.use(express.static(path.join(__dirname, 'public')));
 // Template Engineer
 app.engine('hbs', engine({ extname: '.hbs' }));
 app.set('view engine', 'hbs');
-app.set('views', path.join(__dirname, 'resources/views'));
+                app.set('views', path.join(__dirname, 'resources/views'));
 
 // Middleware Logger
 app.use(morgan('combined'));
