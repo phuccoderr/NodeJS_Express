@@ -7,6 +7,7 @@
     "start": "nodemon --inspect src/index.js",
     "watch": "node-sass --watch src/resources/scss/ --output src/public/css/",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint-staged": "prettier --single-quote --write 'src/**/*.{js,json,scss}'",
     "prepare": "husky"
   },
   "repository": {
@@ -24,11 +25,6 @@
     "url": "https://github.com/phuccoderr/NodeJS_Express/issues"
   },
   "homepage": "https://github.com/phuccoderr/NodeJS_Express#readme",
-  "lint-staged": {
-    "src/**/*.{js,json,scss}": [
-      "prettier --single-quote --write"
-    ]
-  },
   "dependencies": {
     "express": "^4.19.2",
     "express-handlebars": "^7.1.2"
