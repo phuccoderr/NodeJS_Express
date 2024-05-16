@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/phuccoderr/NodeJS_Express#readme",
   "lint-staged": {
-    "**/*.{js,json,scss}": "prettier --single-quote --write"
+    "./src/**/*.{js,json,scss}": "prettier --single-quote --write"
   },
   "dependencies": {
     "express": "^4.19.2",
