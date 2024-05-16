@@ -6,6 +6,8 @@ const morgan = require("morgan");
 const app = express();
 const port = 3000;
 
+const route = require("./routes"); // Auto index !!!
+
 // Input Form Data
 app.use(
   express.urlencoded({
@@ -24,24 +26,10 @@ app.set("views", path.join(__dirname, "resources/views"));
 // Middleware Logger
 app.use(morgan("combined"));
 
-app.get("/", (req, res) => {
-  res.render("home");
-});
-app.get("/news", (req, res) => {
-  res.render("news");
-});
+// Local Host -- Hosting
+// Action ----> Dispatcher ----> Function Handler
 
-app.get("/search", (req, res) => {
-  res.render("search");
-});
-
-app.post("/search", (req, res) => {
-  console.log(req);
-  res.render("search");
-});
-
-app.get("/results", (req, res) => {
-  res.render("results", { body: req.query.search });
-});
+// Route Init
+route(app);
 
 app.listen(port);
