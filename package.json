@@ -25,7 +25,8 @@
   },
   "homepage": "https://github.com/phuccoderr/NodeJS_Express#readme",
   "lint-staged": {
-    "src/**/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --write"
+    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --write",
+    "src/routes/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --write"
   },
   "dependencies": {
     "express": "^4.19.2",
