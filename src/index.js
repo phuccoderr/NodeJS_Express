@@ -5,7 +5,12 @@ const morgan = require("morgan");
 
 const app = express();
 const port = 3000;
+
 const route = require("./routes"); // Auto index !!!
+const db = require("./config/db/index");
+
+// Connect DB
+db.connect();
 
 // Input Form Data
 app.use(
@@ -20,7 +25,7 @@ app.use(express.static(path.join(__dirname, "public")));
 // Template Engineer
 app.engine("hbs", engine({ extname: ".hbs" }));
 app.set("view engine", "hbs");
-app.set("views", path.join(__dirname, "resources/views"));
+app.set("views", path.join(__dirname, "resources", "views"));
 
 // Middleware Logger
 app.use(morgan("combined"));
